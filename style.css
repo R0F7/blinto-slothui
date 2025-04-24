@@ -135,3 +135,24 @@ header .logo .logo-icon {
   top: 140px;
   right: 27px;
 }
+
+.trusted-companies{
+  background: #F8FAFC;
+  padding: 64px 0;
+}
+
+.trusted-companies .companies-logo {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.trusted-companies .companies-logo > div {
+  grid-column: span 2;
+}
+
+.trusted-companies .spacer {
+  grid-column: span 1 !important;
+}
