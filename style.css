@@ -12,10 +12,26 @@ body {
   margin: 0 auto;
 }
 
+.flex {
+  display: flex;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .heading {
   color: #4f46e5;
   font-size: 14px;
-  font-style: normal;
   font-weight: 600;
   border-radius: 1234px;
   background: #eef2ff;
@@ -35,8 +51,10 @@ body {
 .description {
   color: #475569;
   text-align: center;
-  width: 40%;
+  width: 762px;
+  /* border: 1px solid red; */
   margin: 0 auto;
+  padding-bottom: 64px;
   font-size: 20px;
   line-height: 160%;
 }
@@ -118,7 +136,6 @@ header .logo .logo-icon {
 
 .hero-section .content {
   text-align: center;
-  margin-bottom: 64px;
 }
 
 .hero-section .content h1 {
@@ -192,6 +209,7 @@ header .logo .logo-icon {
 
 .feature-box {
 }
+
 .feature-box .image {
   text-align: center;
 }
@@ -211,4 +229,131 @@ header .logo .logo-icon {
   margin-top: 5px;
   font-weight: 400;
   line-height: 160%;
+}
+
+.lazy-work-section {
+  padding: 96px 0;
+  background: var(--Gray-5, #f8fafc);
+}
+
+.lazy-work-section .icon {
+  display: flex;
+  justify-content: center;
+}
+
+.lazy-work-section .icon span {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 123px;
+  background: var(--Brand-5, #eef2ff);
+}
+
+.lazy-work-section .icon img {
+  display: block;
+}
+
+.result-box {
+  /* border: 1px solid red; */
+}
+
+.result-box .show-result {
+  width: 245px;
+  height: 108px;
+}
+
+.result-box .show-result h1 {
+  color: #4f46e5;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: -1.08px;
+}
+
+.result-box .show-result p {
+  color: #475569;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.144px;
+  margin-top: 16px;
+}
+
+.procrastinators-feedback {
+  padding: 95px 0;
+  /* text-align: center; */
+}
+
+.procrastinators-feedback .feedback-content{
+  /* display: flex; */
+}
+
+.procrastinators-feedback .feedback-boxes {
+}
+
+.feedback-boxes .box {
+  padding: 24px;
+  margin-bottom: 10px;
+  border-left: 3px solid #e0e7ff;
+  border-radius: 10px;
+}
+.feedback-boxes .box h4 {
+  color: #475569;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  margin-bottom: 12px;
+}
+.feedback-boxes .box p {
+  width: 468px;
+  color: #475569;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.image-box {
+  width: 592px;
+  height: 592px;
+  border-radius: 32px;
+  background: #f1f5f9;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-box img{
+  width: 327.338px;
+  height: 709.83px;
+  flex-shrink: 0;
+  border-radius: 34px;
+
+  /* transform: rotate(-30deg); */
+}
+
+.image-box .image-1{
+  transform: rotate(-30deg);
+  position: absolute;
+  top: 40px;
+  border: 1px solid #E2E8F0;
+  padding: 5px;
+  border-radius: 34px;
+
+}
+
+.image-box .image-2{
+  transform: rotate(-30deg);
+  position: absolute;
+  top: -330px;
+  left: 280px;
+  border: 1px solid #E2E8F0;
+  padding: 5px;
+  border-radius: 34px;
+
 }
