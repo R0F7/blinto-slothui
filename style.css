@@ -29,6 +29,13 @@ body {
   flex-direction: column;
 }
 
+.hidden {
+  display: none;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .heading {
   color: #4f46e5;
   font-size: 14px;
@@ -59,6 +66,30 @@ body {
   line-height: 160%;
 }
 
+.button {
+  min-height: 48px;
+  padding: 12px 20px;
+  color: white;
+  background: #4f46e5;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.112px;
+  border-radius: 1234px;
+  border: 1px solid #cbd5e1;
+}
+
+.ghost-button {
+  min-height: 48px;
+  padding: 12px 20px;
+  color: #475569;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.112px;
+  border-radius: 1234px;
+  border: 1px solid #cbd5e1;
+}
+
 header {
   position: relative;
   padding: 16px 0;
@@ -67,13 +98,13 @@ header {
   justify-content: space-between;
 }
 
-header .logo {
+.logo {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-header .logo .logo-icon {
+.logo .logo-icon {
   width: 40px;
   height: 40px;
   background: url("./image/BG.png") lightgray 50% / cover no-repeat;
@@ -102,30 +133,6 @@ header .logo .logo-icon {
 .buttons {
   display: flex;
   gap: 10px;
-}
-
-.buttons .button-one {
-  min-height: 48px;
-  padding: 12px 20px;
-  color: #475569;
-  background: transparent;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.112px;
-  border-radius: 1234px;
-  border: 1px solid #cbd5e1;
-}
-
-.buttons .button-two {
-  min-height: 48px;
-  padding: 12px 20px;
-  color: white;
-  background: #4f46e5;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.112px;
-  border-radius: 1234px;
-  border: 1px solid #cbd5e1;
 }
 
 .hero-section {
@@ -377,7 +384,6 @@ header .logo .logo-icon {
   box-sizing: border-box;
 }
 
-
 .reviews .review .stars {
   display: flex;
   gap: 8px;
@@ -393,12 +399,231 @@ header .logo .logo-icon {
 .reviews .review .profile {
   gap: 12px;
 }
-.reviews .review .profile .avarar {
+.reviews .review .profile .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
 }
 .reviews .review .profile .info {
 }
+
 .reviews .review .profile .info p {
+  color: var(--Gray-60, #475569);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
   margin: 0;
 }
 .reviews .review .profile .info h4 {
+  color: var(--Gray-80, #1e293b);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: -0.112px;
 }
+
+.reviews .review .profile .info p {
+  color: var(--Gray-60, #475569);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.office-info {
+  padding: 64px 0;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.info-container .card {
+  border: 1px solid var(--Gray-20, #e2e8f0);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.info-container .card img {
+}
+.info-container .card h4 {
+  color: var(--Gray-80, #1e293b);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  margin-top: 24px;
+  margin-bottom: 4px;
+}
+.info-container .card p {
+  color: var(--Gray-80, #1e293b);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.faq {
+  background: #f8fafc;
+  padding: 96px;
+}
+.faq .faq-heading {
+  text-align: center;
+}
+
+.faq .faq-body {
+  width: 800px;
+}
+
+.faq .faq-box {
+  padding: 16px;
+  border-bottom: 1px solid var(--Gray-30, #cbd5e1);
+}
+.faq .faq-body .faq-box .question {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq .faq-body .faq-box .question h1 {
+  color: var(--Gray-70, #334155);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 22px;
+  letter-spacing: -0.112px;
+}
+
+.faq .faq-body .faq-box p {
+  color: var(--Gray-60, #475569);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  padding-top: 17px;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq .faq-body .faq-box .question button {
+  border: none;
+  background: transparent;
+}
+
+.app-download-section {
+  background: var(--Brand-5, #eef2ff);
+  overflow: hidden;
+}
+
+.app-download-section .app-download-container {
+  height: 589px;
+  /* height: 690.776px; */
+  gap: 96px;
+  overflow: hidden;
+}
+
+.app-download-section .text {
+  width: 50%;
+}
+
+.app-download-section .images {
+  width: 50%;
+}
+.app-download-section .images .image-1 {
+  width: 318.551px;
+  /* height: 690.776px; */
+  height: 589px;
+  flex-shrink: 0;
+  transform: translateY(100px);
+  border: 1px solid #e2e8f0;
+  border-radius: 34px;
+  padding: 5px;
+}
+.app-download-section .images .image-2 {
+  width: 318.551px;
+  /* height: 690.776px; */
+  height: 589px;
+  flex-shrink: 0;
+  transform: translateY(-100px) translateX(35px);
+  border: 1px solid #e2e8f0;
+  border-radius: 34px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.app-download-section .images img {
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+}
+
+.footer {
+  padding: 96px 0;
+}
+
+.footer-contain {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+}
+
+.footer .footer-row {
+}
+.footer .footer-contain .footer-row h4 {
+  color: var(--Gray-80, #1e293b);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: -0.112px;
+  margin-bottom: 16px;
+}
+.footer .footer-contain .footer-row ul {
+  list-style: none;
+}
+
+.footer .footer-contain .footer-row ul li {
+  margin-bottom: 12px;
+}
+
+.footer .footer-contain .footer-row ul li a {
+  text-decoration: none;
+  color: var(--Gray-60, #475569);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.112px;
+}
+
+.footer-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--Gray-30, #cbd5e1);
+  margin-top: 42px;
+  padding-top: 32px;
+}
+
+.footer-footer p {
+  color: var(--Gray-40, #94a3b8);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+}
+
+.footer-footer .image {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 123px;
+  border: 1px solid var(--Gray-30, #cbd5e1);
+}
+

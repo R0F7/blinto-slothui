@@ -1,4 +1,3 @@
-
 // testimonials
 fetch("./testimonials.json")
   .then((result) => result.json())
@@ -51,4 +50,57 @@ fetch("./testimonials.json")
     });
   });
 
-  
+// faq
+fetch("./faq.json")
+  .then((result) => result.json())
+  .then((data) => {
+    const faqBody = document.querySelector(".faq-body");
+    data.forEach((item) => {
+      const faqBox = document.createElement("div");
+      faqBox.className = "faq-box";
+
+      faqBox.innerHTML = `
+      <div class="question">
+        <div class="flex item-center" style="gap: 8px;">
+          <img src="./image/faq icon/Question.svg" alt="" />
+          <h1>${item.question}</h1>
+        </div>
+        <button><img src="./image/faq icon/CaretDown.svg" alt="" /></button>
+      </div>
+      <p>${item.answer}</p>
+    `;
+
+      faqBody.appendChild(faqBox);
+    });
+  });
+
+document.addEventListener("click", function (e) {
+  const question = e.target.closest(".question");
+  if (question) {
+    const faqBox = question.closest(".faq-box");
+    const answer = faqBox.querySelector("p");
+    const arrow = question.querySelector("button img");
+
+    document.querySelectorAll(".faq-box p").forEach((p) => {
+      if (p !== answer) {
+        p.style.maxHeight = null;
+      }
+    });
+
+    document
+      .querySelectorAll(".faq-box .question button img")
+      .forEach((img) => {
+        if (img !== arrow) {
+          img.style.transform = "rotate(0deg)";
+        }
+      });
+
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
+      arrow.style.transform = "rotate(0deg)";
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      arrow.style.transform = "rotate(180deg)";
+    }
+  }
+});
