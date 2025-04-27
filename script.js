@@ -1,3 +1,12 @@
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const menuItems = document.getElementById('menuItems');
+
+hamburgerBtn.addEventListener('click', () => {
+  menuItems.classList.toggle('show');
+});
+
+
+
 // testimonials
 fetch("./testimonials.json")
   .then((result) => result.json())
